@@ -16,7 +16,7 @@ panda.voice_state_update do |event|
   chat_room = PandaHelper.get_chat_room(server)
 
   if PandaHelper.entered_public?(event, head_st)
-    chat_room.send_message "Bobahito in the hoooouse!\nhttps://media.giphy.com/media/tlLBddTfaJmJG/giphy.gif"
+    chat_room.send_message "@here Bobahito in the hoooouse!\nhttps://media.giphy.com/media/tlLBddTfaJmJG/giphy.gif"
   end
 end
 
