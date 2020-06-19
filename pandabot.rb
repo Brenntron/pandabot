@@ -11,13 +11,15 @@ panda.message(with_text: 'Bobahito is here!') do |event|
 end
 
 panda.voice_state_update do |event|
-  head_st = 'Robert Batton'
+  head_st = 'Brenntron'
   server = event.server
   chat_room = PandaHelper.get_chat_room(server)
 
-  if PandaHelper.entered_public?(event, head_st)
-    chat_room.send_message "@here Bobahito in the hoooouse!\nhttps://media.giphy.com/media/tlLBddTfaJmJG/giphy.gif"
+  if PandaHelper.bob_entered_public?(event, head_st)
+    chat_room.send_message "Bobahito in the hoooouse!\nhttps://media.giphy.com/media/tlLBddTfaJmJG/giphy.gif"
   end
+
+  chat_room.send_message 'https://tenor.com/TGwe.gif' if PandaHelper.bob_left_public?(event, head_st)
 end
 
 panda.run
