@@ -11,7 +11,7 @@ panda.message(with_text: 'Bobahito is here!') do |event|
 end
 
 panda.voice_state_update do |event|
-  head_st = 'Brenntron'
+  head_st = 'Robert Batton'
   server = event.server
   chat_room = PandaHelper.get_chat_room(server)
 
