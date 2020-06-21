@@ -20,8 +20,6 @@ panda.voice_state_update do |event|
     chat_room.send_message "Bobahito in the hoooouse!\nhttps://media.giphy.com/media/tlLBddTfaJmJG/giphy.gif"
   end
 
-  chat_room.send_message "That's all folks!\nhttps://tenor.com/TGwe.gif" if PandaHelper.bob_left_public?(event, head_st)
-
   if PandaHelper.miceli_entered_public?(event, miceli)
     chat_room.send_message "Moderator in the house!!!!\nhttps://tenor.com/view/claptrap-robot-gif-13502248"
   end

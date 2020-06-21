@@ -19,14 +19,6 @@ module PandaHelper
     user.username == name && @public_rooms.include?(event.channel.name)
   end
 
-  def self.bob_left_public?(event, name)
-    return false if event.old_channel.nil? || !@public_rooms.include?(event.old_channel.name)
-
-    user = event.user.on(event.server)
-
-    user.username == name
-  end
-
   def self.miceli_entered_public?(event, name)
     return false if event.channel.nil?
 
