@@ -12,6 +12,7 @@ end
 
 panda.voice_state_update do |event|
   head_st = 'Robert Batton'
+  miceli = 'Miceli'
   server = event.server
   chat_room = PandaHelper.get_chat_room(server)
 
@@ -20,6 +21,10 @@ panda.voice_state_update do |event|
   end
 
   chat_room.send_message "That's all folks!\nhttps://tenor.com/TGwe.gif" if PandaHelper.bob_left_public?(event, head_st)
+
+  if PandaHelper.miceli_entered_public?(event, miceli)
+    chat_room.send_message "Moderator in the house!!!!\nhttps://tenor.com/view/claptrap-robot-gif-13502248"
+  end
 end
 
 panda.run

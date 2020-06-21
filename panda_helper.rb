@@ -26,4 +26,12 @@ module PandaHelper
 
     user.username == name
   end
+
+  def self.miceli_entered_public?(event, name)
+    return false if event.channel.nil?
+
+    user = event.user.on(event.server)
+
+    user.username == name
+  end
 end
