@@ -9,5 +9,3 @@ PandaHelper	panda_helper.rb	/^module PandaHelper$/;"	m
 bob_entered_public?	panda_helper.rb	/^  def self.bob_entered_public?(event, name)$/;"	S	module:PandaHelper
 get_chat_room	panda_helper.rb	/^  def self.get_chat_room(server)$/;"	S	module:PandaHelper
 miceli_entered_public?	panda_helper.rb	/^  def self.miceli_entered_public?(event, name)$/;"	S	module:PandaHelper
-when 'Bobahito is here!' is not typed in chat	spec/unit/pandabot_spec.rb	/^  context "when 'Bobahito is here!' is not typed in chat" do$/;"	c
-when 'Bobahito is here!' is typed in chat	spec/unit/pandabot_spec.rb	/^  context "when 'Bobahito is here!' is typed in chat" do$/;"	c
