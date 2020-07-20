@@ -19,10 +19,6 @@ panda.voice_state_update do |event|
   if PandaHelper.bob_entered_public?(event, head_st)
     chat_room.send_message "Bobahito has arrived.\nhttps://tenor.com/view/tmnt-tmntseries-teenage-mutant-ninja-turtles-tmntgifs-spooky-gif-9872292"
   end
-
-  if PandaHelper.miceli_entered_public?(event, miceli)
-    chat_room.send_message "Moderator in the house!!!!\nhttps://tenor.com/view/claptrap-robot-gif-13502248"
-  end
 end
 
 panda.run
